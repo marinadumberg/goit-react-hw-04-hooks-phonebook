@@ -39,7 +39,7 @@ const FormHooks = ({ onSubmit }) => {
           <input
             className={s.formInput}
             placeholder="Name"
-            id={this.nameInputId}
+            id={nameInputId}
             type="text"
             name="name"
             value={name}
