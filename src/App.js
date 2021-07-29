@@ -25,7 +25,7 @@ export default function AppHooks() {
 
   const handleSubmitContact = ({ name, number }) => {
     if (contacts.find((contact) => contact.name === name)) {
-      toast.error(` 🛑 '${name}' is already in your list`, {
+      toast.error(`'${name}' is already in your list`, {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -37,7 +37,7 @@ export default function AppHooks() {
       return;
     }
     if (contacts.find((contact) => contact.number === number)) {
-      toast.error(`🛑 '${number}' is already in your list`, {
+      toast.error(`'${number}' is already in your list`, {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -49,7 +49,7 @@ export default function AppHooks() {
       return;
     }
     addContact(name, number);
-    toast.success(`🚀 '${name}' added to phonebook`, {
+    toast.success(`'${name}' added to phonebook`, {
       position: "top-right",
       autoClose: 3000,
       hideProgressBar: false,
@@ -62,7 +62,7 @@ export default function AppHooks() {
 
   const deleteContact = (contId) => {
     setContacts(contacts.filter((contact) => contact.id !== contId));
-    toast(` 👍🏻 Deleted`, {
+    toast(`Deleted`, {
       position: "top-right",
       autoClose: 3000,
       hideProgressBar: false,
