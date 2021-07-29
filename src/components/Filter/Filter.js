@@ -9,7 +9,7 @@ const Filter = ({ value, onChange }) => (
       placeholder="Find contacts"
       type="text"
       value={value}
-      onChange={onChange}
+      onChange={(e) => onChange(e.target.value)}
     />
   </label>
 );
